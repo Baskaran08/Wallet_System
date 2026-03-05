@@ -1,0 +1,1501 @@
+2026-03-02 12:31:34 [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-03-02 12:36:48 [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-03-02 12:45:20 [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-03-02 12:46:17 [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-03-02 12:47:55 [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-03-02 12:47:56 [INFO] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@1b83fac3
+2026-03-02 12:47:56 [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-03-02 12:53:43 [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-03-02 12:53:43 [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-03-02 12:53:58 [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-03-02 12:53:58 [INFO] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@73c6ebec
+2026-03-02 12:53:58 [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-03-02 12:55:17 [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-03-02 12:55:17 [INFO] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@22decfa2
+2026-03-02 12:55:17 [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-03-02 12:55:19 [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-03-02 12:55:19 [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-03-02 12:55:20 [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-03-02 12:55:20 [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-03-02 12:55:47 [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-03-02 12:55:48 [INFO] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@3533d790
+2026-03-02 12:55:48 [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-03-02 12:55:59 [INFO] com.fintech.Dao.UserDao - User created with ID: 1
+2026-03-02 12:55:59 [INFO] com.fintech.Dao.WalletDao - Wallet created for user ID: 1
+2026-03-02 12:55:59 [INFO] com.fintech.Service.AuthService - User registration successful for email: baskarangm8112002@gmail.com
+2026-03-02 12:57:30 [ERROR] com.fintech.Service.AuthService - Login failed due to database error. Email: baskarangm8112002@gmail.com
+java.lang.RuntimeException: java.sql.SQLException: Column 'password' not found.
+	at com.fintech.Dao.UserDao.findByEmail(UserDao.java:83)
+	at com.fintech.Service.AuthService.login(AuthService.java:89)
+	at com.fintech.Controller.AuthController.handleLogin(AuthController.java:48)
+	at com.fintech.Controller.AuthController.doPost(AuthController.java:34)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:555)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:197)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:142)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:142)
+	at com.fintech.Filter.JwtAuthenticationFilter.doFilter(JwtAuthenticationFilter.java:21)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:142)
+	at com.fintech.Filter.GlobalExceptionFilter.doFilter(GlobalExceptionFilter.java:26)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:142)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:166)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:88)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:481)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:127)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:83)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:643)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:72)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:398)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:939)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1831)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:973)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:491)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: java.sql.SQLException: Column 'password' not found.
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:130)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:98)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:90)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:64)
+	at com.mysql.cj.jdbc.result.ResultSetImpl.findColumn(ResultSetImpl.java:584)
+	at com.mysql.cj.jdbc.result.ResultSetImpl.getString(ResultSetImpl.java:896)
+	at com.zaxxer.hikari.pool.HikariProxyResultSet.getString(HikariProxyResultSet.java)
+	at com.fintech.Dao.UserDao.mapRow(UserDao.java:112)
+	at com.fintech.Dao.UserDao.findByEmail(UserDao.java:77)
+	... 33 common frames omitted
+2026-03-02 13:07:01 [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-03-02 13:07:01 [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-03-02 13:07:10 [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-03-02 13:07:10 [INFO] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@487ee2a
+2026-03-02 13:07:10 [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-03-02 13:07:17 [ERROR] com.fintech.Service.AuthService - Login failed due to database error. Email: baskarangm8112002@gmail.com
+java.lang.RuntimeException: java.sql.SQLException: Column 'password' not found.
+	at com.fintech.Dao.UserDao.findByEmail(UserDao.java:83)
+	at com.fintech.Service.AuthService.login(AuthService.java:89)
+	at com.fintech.Controller.AuthController.handleLogin(AuthController.java:55)
+	at com.fintech.Controller.AuthController.doPost(AuthController.java:41)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:555)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:197)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:142)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:142)
+	at com.fintech.Filter.JwtAuthenticationFilter.doFilter(JwtAuthenticationFilter.java:21)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:142)
+	at com.fintech.Filter.GlobalExceptionFilter.doFilter(GlobalExceptionFilter.java:39)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:142)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:166)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:88)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:481)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:127)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:83)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:643)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:72)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:398)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:939)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1831)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:973)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:491)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: java.sql.SQLException: Column 'password' not found.
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:130)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:98)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:90)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:64)
+	at com.mysql.cj.jdbc.result.ResultSetImpl.findColumn(ResultSetImpl.java:584)
+	at com.mysql.cj.jdbc.result.ResultSetImpl.getString(ResultSetImpl.java:896)
+	at com.zaxxer.hikari.pool.HikariProxyResultSet.getString(HikariProxyResultSet.java)
+	at com.fintech.Dao.UserDao.mapRow(UserDao.java:112)
+	at com.fintech.Dao.UserDao.findByEmail(UserDao.java:77)
+	... 33 common frames omitted
+2026-03-02 13:09:40 [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-03-02 13:09:40 [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-03-02 13:09:46 [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-03-02 13:09:46 [INFO] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@3d0ce151
+2026-03-02 13:09:46 [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-03-02 13:09:55 [ERROR] com.fintech.Service.AuthService - Login failed due to database error. Email: baskarangm8112002@gmail.com
+java.lang.RuntimeException: java.sql.SQLException: Column 'password' not found.
+	at com.fintech.Dao.UserDao.findByEmail(UserDao.java:83)
+	at com.fintech.Service.AuthService.login(AuthService.java:89)
+	at com.fintech.Controller.AuthController.handleLogin(AuthController.java:55)
+	at com.fintech.Controller.AuthController.doPost(AuthController.java:41)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:555)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:197)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:142)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:142)
+	at com.fintech.Filter.JwtAuthenticationFilter.doFilter(JwtAuthenticationFilter.java:21)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:142)
+	at com.fintech.Filter.GlobalExceptionFilter.doFilter(GlobalExceptionFilter.java:39)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:142)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:166)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:88)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:481)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:127)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:83)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:643)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:72)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:398)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:939)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1831)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:973)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:491)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: java.sql.SQLException: Column 'password' not found.
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:130)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:98)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:90)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:64)
+	at com.mysql.cj.jdbc.result.ResultSetImpl.findColumn(ResultSetImpl.java:584)
+	at com.mysql.cj.jdbc.result.ResultSetImpl.getString(ResultSetImpl.java:896)
+	at com.zaxxer.hikari.pool.HikariProxyResultSet.getString(HikariProxyResultSet.java)
+	at com.fintech.Dao.UserDao.mapRow(UserDao.java:112)
+	at com.fintech.Dao.UserDao.findByEmail(UserDao.java:77)
+	... 33 common frames omitted
+2026-03-02 13:10:01 [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-03-02 13:10:01 [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-03-02 13:10:14 [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-03-02 13:10:15 [INFO] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@3ed3e66d
+2026-03-02 13:10:15 [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-03-02 13:10:31 [ERROR] com.fintech.Service.AuthService - Login failed due to database error. Email: baskarangm8112002@gmail.com
+java.lang.RuntimeException: java.sql.SQLException: Column 'password' not found.
+	at com.fintech.Dao.UserDao.findByEmail(UserDao.java:83)
+	at com.fintech.Service.AuthService.login(AuthService.java:89)
+	at com.fintech.Controller.AuthController.handleLogin(AuthController.java:55)
+	at com.fintech.Controller.AuthController.doPost(AuthController.java:41)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:555)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:197)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:142)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:142)
+	at com.fintech.Filter.JwtAuthenticationFilter.doFilter(JwtAuthenticationFilter.java:21)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:142)
+	at com.fintech.Filter.GlobalExceptionFilter.doFilter(GlobalExceptionFilter.java:39)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:142)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:166)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:88)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:481)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:127)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:83)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:643)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:72)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:398)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:939)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1831)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:973)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:491)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: java.sql.SQLException: Column 'password' not found.
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:130)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:98)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:90)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:64)
+	at com.mysql.cj.jdbc.result.ResultSetImpl.findColumn(ResultSetImpl.java:584)
+	at com.mysql.cj.jdbc.result.ResultSetImpl.getString(ResultSetImpl.java:896)
+	at com.zaxxer.hikari.pool.HikariProxyResultSet.getString(HikariProxyResultSet.java)
+	at com.fintech.Dao.UserDao.mapRow(UserDao.java:112)
+	at com.fintech.Dao.UserDao.findByEmail(UserDao.java:77)
+	... 33 common frames omitted
+2026-03-02 13:10:31 [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-03-02 13:10:31 [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-03-02 13:10:36 [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-03-02 13:10:37 [INFO] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@e9947af
+2026-03-02 13:10:37 [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-03-02 13:13:09 [WARN] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m29s656ms562µs800ns).
+2026-03-02 13:13:09 [ERROR] com.fintech.Service.AuthService - Login failed due to database error. Email: baskarangm8112002@gmail.com
+java.lang.RuntimeException: java.sql.SQLException: Column 'password' not found.
+	at com.fintech.Dao.UserDao.findByEmail(UserDao.java:83)
+	at com.fintech.Service.AuthService.login(AuthService.java:89)
+	at com.fintech.Controller.AuthController.handleLogin(AuthController.java:55)
+	at com.fintech.Controller.AuthController.doPost(AuthController.java:41)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:555)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:197)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:142)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:142)
+	at com.fintech.Filter.JwtAuthenticationFilter.doFilter(JwtAuthenticationFilter.java:21)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:142)
+	at com.fintech.Filter.GlobalExceptionFilter.doFilter(GlobalExceptionFilter.java:39)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:142)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:166)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:88)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:481)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:127)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:83)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:643)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:72)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:398)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:939)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1831)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:973)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:491)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: java.sql.SQLException: Column 'password' not found.
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:130)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:98)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:90)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:64)
+	at com.mysql.cj.jdbc.result.ResultSetImpl.findColumn(ResultSetImpl.java:584)
+	at com.mysql.cj.jdbc.result.ResultSetImpl.getString(ResultSetImpl.java:896)
+	at com.zaxxer.hikari.pool.HikariProxyResultSet.getString(HikariProxyResultSet.java)
+	at com.fintech.Dao.UserDao.mapRow(UserDao.java:112)
+	at com.fintech.Dao.UserDao.findByEmail(UserDao.java:77)
+	... 33 common frames omitted
+2026-03-02 13:13:09 [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-03-02 13:13:09 [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-03-02 13:13:22 [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-03-02 13:13:23 [INFO] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@3d0ce151
+2026-03-02 13:13:23 [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-03-02 13:13:31 [INFO] com.fintech.Service.AuthService - Login successful for email: baskarangm8112002@gmail.com
+2026-03-02 13:14:02 [INFO] com.fintech.Service.WalletService - Wallet fetched for userId: 1
+2026-03-02 13:14:44 [INFO] com.fintech.Service.WalletService - Wallet fetched for userId: 1
+2026-03-02 13:15:30 [INFO] com.fintech.Dao.UserDao - User created with ID: 2
+2026-03-02 13:15:30 [INFO] com.fintech.Dao.WalletDao - Wallet created for user ID: 2
+2026-03-02 13:15:30 [INFO] com.fintech.Service.AuthService - User registration successful for email: baskarangm811@gmail.com
+2026-03-02 13:15:40 [INFO] com.fintech.Service.AuthService - Login successful for email: baskarangm811@gmail.com
+2026-03-02 13:15:55 [INFO] com.fintech.Service.WalletService - Wallet fetched for userId: 2
+2026-03-02 13:20:27 [INFO] com.fintech.Service.WalletService - Wallet fetched for userId: 2
+2026-03-02 13:24:00 [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-03-02 13:24:00 [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-03-02 13:24:06 [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-03-02 13:24:07 [INFO] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@6fe33512
+2026-03-02 13:24:07 [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-03-02 13:24:45 [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-03-02 13:24:45 [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-03-02 13:24:57 [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-03-02 13:24:58 [INFO] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@480f1311
+2026-03-02 13:24:58 [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-03-02 13:28:15 [WARN] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=2m46s607ms264µs400ns).
+2026-03-02 13:28:15 [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-03-02 13:28:15 [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-03-02 13:28:21 [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-03-02 13:28:21 [INFO] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@30a99b85
+2026-03-02 13:28:21 [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-03-02 13:30:02 [WARN] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m40s593ms184µs600ns).
+2026-03-02 13:30:02 [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-03-02 13:30:02 [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-03-02 13:30:08 [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-03-02 13:30:09 [INFO] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@63767d
+2026-03-02 13:30:09 [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-03-02 13:32:40 [WARN] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=2m327ms388µs700ns).
+2026-03-02 13:32:40 [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-03-02 13:32:40 [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-03-02 13:32:45 [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-03-02 13:32:45 [INFO] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@48cebb78
+2026-03-02 13:32:45 [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-03-02 13:33:56 [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-03-02 13:33:56 [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-03-02 13:34:01 [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-03-02 13:34:02 [INFO] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@281d3ce7
+2026-03-02 13:34:02 [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-03-02 13:35:57 [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-03-02 13:35:57 [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-03-02 13:37:47 [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-03-02 13:37:48 [INFO] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@60c68c7b
+2026-03-02 13:37:48 [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-03-02 13:38:55 [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-03-02 13:38:55 [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-03-02 13:41:27 [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-03-02 13:41:28 [INFO] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@3d0ce151
+2026-03-02 13:41:28 [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-03-02 13:41:47 [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-03-02 13:41:47 [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-03-02 13:41:56 [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-03-02 13:41:57 [INFO] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@30a99b85
+2026-03-02 13:41:57 [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-03-02 13:45:13 [WARN] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=2m43s789ms819µs).
+2026-03-02 13:45:13 [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-03-02 13:45:13 [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-03-02 13:45:19 [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-03-02 13:45:19 [INFO] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@e9947af
+2026-03-02 13:45:19 [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-03-02 13:47:34 [WARN] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m30s569ms347µs700ns).
+2026-03-02 13:47:34 [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-03-02 13:47:34 [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-03-02 14:38:52 [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-03-02 14:38:53 [INFO] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@e9947af
+2026-03-02 14:38:53 [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-03-02 14:46:38 [INFO] com.fintech.Service.AuthService - Login successful for email: baskarangm811@gmail.com
+2026-03-02 14:47:50 [INFO] com.fintech.Service.AuthService - Login successful for email: baskarangm811@gmail.com
+2026-03-02 14:48:39 [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-03-02 14:48:39 [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-03-02 14:50:59 [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-03-02 14:50:59 [INFO] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@6fe33512
+2026-03-02 14:50:59 [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-03-02 15:09:29 [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-03-02 15:09:29 [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-03-02 15:09:36 [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-03-02 15:09:37 [INFO] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@261b27db
+2026-03-02 15:09:37 [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-03-02 15:09:57 [INFO] com.fintech.Dao.UserDao - User created with ID: 3
+2026-03-02 15:09:57 [INFO] com.fintech.Dao.WalletDao - Wallet created for user ID: 3
+2026-03-02 15:09:57 [INFO] com.fintech.Service.AuthService - User registration successful for email: baskarangm81102@gmail.com
+2026-03-02 15:10:14 [INFO] com.fintech.Service.AuthService - Login successful for email: baskarangm81102@gmail.com
+2026-03-02 15:10:32 [INFO] com.fintech.Service.WalletService - Wallet fetched for userId: 3
+2026-03-02 15:12:57 [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-03-02 15:12:57 [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-03-02 15:18:23 [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-03-02 15:18:23 [INFO] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@261b27db
+2026-03-02 15:18:23 [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-03-02 15:19:59 [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-03-02 15:19:59 [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-03-02 15:20:06 [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-03-02 15:20:07 [INFO] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@1d6ed085
+2026-03-02 15:20:07 [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-03-02 15:20:55 [WARN] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=47s917ms46µs900ns).
+2026-03-02 15:21:27 [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-03-02 15:21:27 [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-03-02 15:21:39 [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-03-02 15:21:39 [INFO] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@6fe33512
+2026-03-02 15:21:39 [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-03-02 15:21:59 [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-03-02 15:21:59 [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-03-02 15:22:08 [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-03-02 15:22:09 [INFO] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@f9919a2
+2026-03-02 15:22:09 [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-03-02 15:23:53 [WARN] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m43s791ms985µs700ns).
+2026-03-02 15:23:53 [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-03-02 15:23:53 [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-03-02 15:23:59 [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-03-02 15:24:00 [INFO] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@53bc6492
+2026-03-02 15:24:00 [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-03-02 15:25:05 [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-03-02 15:25:05 [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-03-02 15:25:09 [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-03-02 15:25:10 [INFO] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2e68bd3d
+2026-03-02 15:25:10 [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-03-02 15:26:24 [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-03-02 15:26:24 [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-03-02 15:26:43 [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-03-02 15:26:43 [INFO] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5a106b26
+2026-03-02 15:26:43 [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-03-02 15:27:02 [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-03-02 15:27:02 [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-03-02 15:30:47 [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-03-02 15:30:48 [INFO] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2ced7cf
+2026-03-02 15:30:48 [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-03-02 15:33:35 [INFO] com.fintech.Service.AuthService - Login successful for email: baskarangm811@gmail.com
+2026-03-02 15:43:50 [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-03-02 15:43:50 [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-03-02 18:08:21 [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-03-02 18:08:22 [INFO] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2e04dbc1
+2026-03-02 18:08:22 [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-03-02 18:08:24 [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-03-02 18:08:24 [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-03-02 18:14:37 [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-03-02 18:14:38 [INFO] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@7b9e7633
+2026-03-02 18:14:38 [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-03-02 18:15:22 [INFO] com.fintech.Service.AuthService - Login successful for email: baskarangm811@gmail.com
+2026-03-02 18:16:37 [INFO] com.fintech.Service.AuthService - Login successful for email: baskarangm8112002@gmail.com
+2026-03-02 18:20:46 [INFO] com.fintech.Service.AuthService - Login successful for email: baskarangm8112002@gmail.com
+2026-03-02 18:23:46 [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-03-02 18:23:46 [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-03-02 18:23:56 [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-03-02 18:23:57 [INFO] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@16576a6
+2026-03-02 18:23:57 [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-03-02 18:24:21 [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-03-02 18:24:21 [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-03-02 18:24:22 [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-03-02 18:24:23 [INFO] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5d8edf2
+2026-03-02 18:24:23 [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-03-02 18:24:25 [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Starting...
+2026-03-02 18:24:25 [INFO] com.zaxxer.hikari.pool.HikariPool - HikariPool-2 - Added connection com.mysql.cj.jdbc.ConnectionImpl@388b3f11
+2026-03-02 18:24:25 [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Start completed.
+2026-03-02 18:24:26 [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-03-02 18:24:26 [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-03-02 18:24:37 [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Shutdown initiated...
+2026-03-02 18:24:37 [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Shutdown completed.
+2026-03-02 18:24:51 [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-03-02 18:24:52 [INFO] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@3a4181ba
+2026-03-02 18:24:52 [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-03-02 18:25:19 [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-03-02 18:25:19 [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-03-02 18:26:01 [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-03-02 18:26:01 [INFO] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@12b962b1
+2026-03-02 18:26:01 [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-03-02 18:26:37 [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-03-02 18:26:37 [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-03-02 18:26:44 [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-03-02 18:26:45 [INFO] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@65bc50c9
+2026-03-02 18:26:45 [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-03-02 18:27:34 [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-03-02 18:27:34 [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-03-02 18:27:46 [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-03-02 18:27:47 [INFO] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@6d98e607
+2026-03-02 18:27:47 [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-03-02 18:28:45 [WARN] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=58s504ms671µs500ns).
+2026-03-02 18:29:17 [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-03-02 18:29:17 [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-03-02 18:29:23 [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-03-02 18:29:24 [INFO] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@7a1587e8
+2026-03-02 18:29:24 [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-03-02 18:33:57 [WARN] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=3m24s802ms527µs200ns).
+2026-03-02 18:33:59 [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-03-02 18:33:59 [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-03-02 18:45:55 [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-03-02 18:45:56 [INFO] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@6d98e607
+2026-03-02 18:45:56 [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-03-02 18:47:55 [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-03-02 18:47:55 [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-03-02 18:48:11 [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-03-02 18:48:12 [INFO] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@7ee6d5fd
+2026-03-02 18:48:12 [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-03-02 18:49:26 [INFO] com.fintech.Service.AuthService - Login successful for email: baskarangm811@gmail.com
+2026-03-02 19:00:36 [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-03-02 19:00:37 [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-03-03 11:24:32 [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-03-03 11:24:33 [INFO] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@7b9e7633
+2026-03-03 11:24:33 [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-03-03 11:25:51 [INFO] com.fintech.Service.AuthService - Login successful for email: baskarangm811@gmail.com
+2026-03-03 11:26:11 [INFO] com.fintech.Service.WalletService - Wallet fetched for userId: 2
+2026-03-03 11:26:53 [INFO] com.fintech.Service.WalletService - Wallet fetched for userId: 2
+2026-03-03 11:27:06 [INFO] com.fintech.Service.WalletService - Wallet fetched for userId: 2
+2026-03-03 11:27:13 [INFO] com.fintech.Service.WalletService - Wallet fetched for userId: 2
+2026-03-03 11:27:21 [INFO] com.fintech.Service.WalletService - Wallet fetched for userId: 2
+2026-03-03 11:27:29 [INFO] com.fintech.Service.WalletService - Wallet fetched for userId: 2
+2026-03-03 11:37:36 [INFO] com.fintech.Service.AuthService - Login successful for email: baskarangm8112002@gmail.com
+2026-03-03 11:40:53 [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-03-03 11:40:53 [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-03-03 11:41:00 [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-03-03 11:41:01 [INFO] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@1d47b761
+2026-03-03 11:41:01 [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-03-03 11:42:51 [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-03-03 11:42:51 [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-03-03 11:42:58 [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-03-03 11:42:59 [INFO] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@220a7f95
+2026-03-03 11:42:59 [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-03-03 11:43:29 [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-03-03 11:43:29 [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-03-03 11:43:35 [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-03-03 11:43:35 [INFO] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4e09c3b0
+2026-03-03 11:43:35 [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-03-03 11:43:45 [INFO] com.fintech.Service.WalletService - Wallet fetched for userId: 2
+2026-03-03 11:46:19 [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-03-03 11:46:19 [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-03-03 11:46:28 [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-03-03 11:46:29 [INFO] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@6149adee
+2026-03-03 11:46:29 [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-03-03 11:48:00 [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-03-03 11:48:00 [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-03-03 11:48:06 [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-03-03 11:48:07 [INFO] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@7da70124
+2026-03-03 11:48:07 [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-03-03 11:49:32 [WARN] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=50s560ms923µs800ns).
+2026-03-03 11:49:32 [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-03-03 11:49:32 [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-03-03 11:49:40 [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-03-03 11:49:40 [INFO] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4e09c3b0
+2026-03-03 11:49:40 [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-03-03 11:52:47 [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-03-03 11:52:47 [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-03-03 13:08:40 [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-03-03 13:08:41 [INFO] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4e09c3b0
+2026-03-03 13:08:41 [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-03-03 13:09:27 [INFO] com.fintech.Service.AuthService - Login successful for email: baskarangm8112002@gmail.com
+2026-03-03 13:11:06 [ERROR] com.fintech.Service.AdminService - Error during wallet deposit for walletId: 2
+java.lang.RuntimeException: java.sql.SQLSyntaxErrorException: Unknown column 'wallet_id' in 'where clause'
+	at com.fintech.Dao.WalletDao.findByWalletId(WalletDao.java:117)
+	at com.fintech.Service.AdminService.handleDeposit(AdminService.java:54)
+	at com.fintech.Controller.AdminController.handleDeposit(AdminController.java:89)
+	at com.fintech.Controller.AdminController.doPut(AdminController.java:76)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:558)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:197)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:142)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:142)
+	at com.fintech.Filter.AdminAuthorizationFilter.doFilter(AdminAuthorizationFilter.java:41)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:142)
+	at com.fintech.Filter.JwtAuthenticationFilter.doFilter(JwtAuthenticationFilter.java:44)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:142)
+	at com.fintech.Filter.GlobalExceptionFilter.doFilter(GlobalExceptionFilter.java:39)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:142)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:166)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:88)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:481)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:127)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:83)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:643)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:72)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:398)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:939)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1831)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:973)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:491)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: java.sql.SQLSyntaxErrorException: Unknown column 'wallet_id' in 'where clause'
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:121)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:916)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeQuery(ClientPreparedStatement.java:972)
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.executeQuery(ProxyPreparedStatement.java:52)
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.executeQuery(HikariProxyPreparedStatement.java)
+	at com.fintech.Dao.WalletDao.findByWalletId(WalletDao.java:109)
+	... 36 common frames omitted
+2026-03-03 13:13:38 [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-03-03 13:13:38 [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-03-03 13:13:46 [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-03-03 13:13:47 [INFO] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@790bd0e
+2026-03-03 13:13:47 [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-03-03 13:14:16 [ERROR] com.fintech.Service.AdminService - Error during wallet deposit for walletId: 2
+java.lang.RuntimeException: java.sql.SQLSyntaxErrorException: Unknown column 'wallet_id' in 'where clause'
+	at com.fintech.Dao.WalletDao.findByWalletId(WalletDao.java:117)
+	at com.fintech.Service.AdminService.handleDeposit(AdminService.java:54)
+	at com.fintech.Controller.AdminController.handleDeposit(AdminController.java:89)
+	at com.fintech.Controller.AdminController.doPut(AdminController.java:76)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:558)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:197)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:142)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:142)
+	at com.fintech.Filter.AdminAuthorizationFilter.doFilter(AdminAuthorizationFilter.java:41)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:142)
+	at com.fintech.Filter.JwtAuthenticationFilter.doFilter(JwtAuthenticationFilter.java:44)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:142)
+	at com.fintech.Filter.GlobalExceptionFilter.doFilter(GlobalExceptionFilter.java:39)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:142)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:166)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:88)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:481)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:127)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:83)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:643)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:72)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:398)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:939)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1831)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:973)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:491)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: java.sql.SQLSyntaxErrorException: Unknown column 'wallet_id' in 'where clause'
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:121)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:916)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeQuery(ClientPreparedStatement.java:972)
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.executeQuery(ProxyPreparedStatement.java:52)
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.executeQuery(HikariProxyPreparedStatement.java)
+	at com.fintech.Dao.WalletDao.findByWalletId(WalletDao.java:109)
+	... 36 common frames omitted
+2026-03-03 13:15:40 [WARN] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=52s91ms972µs801ns).
+2026-03-03 13:20:40 [ERROR] com.fintech.Service.AdminService - Error during wallet deposit for walletId: 2
+java.lang.RuntimeException: java.sql.SQLSyntaxErrorException: Unknown column 'wallet_id' in 'where clause'
+	at com.fintech.Dao.WalletDao.findByWalletId(WalletDao.java:117)
+	at com.fintech.Service.AdminService.handleDeposit(AdminService.java:54)
+	at com.fintech.Controller.AdminController.handleDeposit(AdminController.java:89)
+	at com.fintech.Controller.AdminController.doPut(AdminController.java:76)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:558)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:197)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:142)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:142)
+	at com.fintech.Filter.AdminAuthorizationFilter.doFilter(AdminAuthorizationFilter.java:41)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:142)
+	at com.fintech.Filter.JwtAuthenticationFilter.doFilter(JwtAuthenticationFilter.java:44)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:142)
+	at com.fintech.Filter.GlobalExceptionFilter.doFilter(GlobalExceptionFilter.java:39)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:142)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:166)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:88)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:481)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:127)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:83)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:643)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:72)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:398)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:939)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1831)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:973)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:491)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: java.sql.SQLSyntaxErrorException: Unknown column 'wallet_id' in 'where clause'
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:121)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:916)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeQuery(ClientPreparedStatement.java:972)
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.executeQuery(ProxyPreparedStatement.java:52)
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.executeQuery(HikariProxyPreparedStatement.java)
+	at com.fintech.Dao.WalletDao.findByWalletId(WalletDao.java:109)
+	... 36 common frames omitted
+2026-03-03 13:20:40 [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-03-03 13:20:41 [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-03-03 13:20:53 [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-03-03 13:20:54 [INFO] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@220a7f95
+2026-03-03 13:20:54 [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-03-03 13:21:50 [INFO] com.fintech.Service.AuthService - Login successful for email: baskarangm811@gmail.com
+2026-03-03 13:22:44 [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-03-03 13:22:44 [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-03-03 13:27:11 [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-03-03 13:27:12 [INFO] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4e09c3b0
+2026-03-03 13:27:12 [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-03-03 13:28:41 [INFO] com.fintech.Service.AuthService - Login successful for email: baskarangm8112002@gmail.com
+2026-03-03 13:34:04 [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-03-03 13:34:04 [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-03-05 12:13:14 [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-03-05 12:13:15 [INFO] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@421c4c3e
+2026-03-05 12:13:15 [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-03-05 12:14:36 [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-03-05 12:14:36 [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-03-05 12:14:42 [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-03-05 12:14:43 [INFO] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4e09c3b0
+2026-03-05 12:14:43 [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-03-05 12:15:14 [INFO] com.fintech.Service.AuthService - Login successful for email: baskarangm811@gmail.com
+2026-03-05 12:17:30 [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-03-05 12:17:30 [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-03-05 12:17:36 [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-03-05 12:17:37 [INFO] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5b5f48d5
+2026-03-05 12:17:37 [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-03-05 12:18:36 [INFO] com.fintech.Service.AuthService - Login successful for email: baskarangm8112002@gmail.com
+2026-03-05 12:20:41 [INFO] com.fintech.Service.AuthService - Login successful for email: baskarangm811@gmail.com
+2026-03-05 12:59:03 [WARN] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=16m55s340ms835µs400ns).
+2026-03-05 13:00:58 [INFO] com.fintech.Service.AuthService - Login successful for email: baskarangm811@gmail.com
+2026-03-05 13:01:52 [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-03-05 13:01:52 [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-03-05 13:02:04 [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-03-05 13:02:05 [INFO] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@7227e3f1
+2026-03-05 13:02:05 [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-03-05 13:04:44 [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-03-05 13:04:44 [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-03-05 13:05:15 [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-03-05 13:05:16 [INFO] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5522f9b
+2026-03-05 13:05:16 [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-03-05 13:15:10 [INFO] com.fintech.Service.AuthService - Login successful for email: baskarangm8112002@gmail.com
+2026-03-05 13:17:38 [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-03-05 13:17:38 [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-03-05 16:03:53 [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-03-05 16:03:54 [INFO] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4e09c3b0
+2026-03-05 16:03:54 [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-03-05 16:04:06 [INFO] com.fintech.Filter.GlobalExceptionFilter - REQUEST  | method=POST uri=/auth/login 
+2026-03-05 16:04:06 [INFO] com.fintech.Dao.UserDao - User found with email: baskarangm8112002@gmail.com
+2026-03-05 16:04:07 [INFO] com.fintech.Service.AuthService - Login successful for email: baskarangm8112002@gmail.com
+2026-03-05 16:04:07 [INFO] com.fintech.Filter.GlobalExceptionFilter - RESPONSE | method=POST uri=/auth/login status=200 timeTaken=896ms
+2026-03-05 16:04:35 [INFO] com.fintech.Filter.GlobalExceptionFilter - REQUEST  | method=POST uri=/auth/login 
+2026-03-05 16:04:35 [WARN] com.fintech.Service.AuthService - Login failed. Email not found: baskarangm811202@gmail.com
+2026-03-05 16:04:35 [ERROR] com.fintech.Filter.GlobalExceptionFilter - RESPONSE | method=POST uri=/auth/login status=0 timeTaken=0ms error=Invalid credentials
+2026-03-05 16:05:43 [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-03-05 16:05:43 [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-03-05 16:05:50 [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-03-05 16:05:51 [INFO] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@57f31caf
+2026-03-05 16:05:51 [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-03-05 16:05:57 [INFO] com.fintech.Filter.GlobalExceptionFilter - REQUEST  | method=POST uri=/auth/login 
+2026-03-05 16:05:58 [WARN] com.fintech.Service.AuthService - Login failed. Email not found: baskarangm811202@gmail.com
+2026-03-05 16:05:58 [ERROR] com.fintech.Filter.GlobalExceptionFilter - RESPONSE | method=POST uri=/auth/login status=0 timeTaken=251ms error=Invalid credentials
+2026-03-05 16:07:46 [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-03-05 16:07:46 [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-03-05 16:07:54 [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-03-05 16:07:55 [INFO] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@738da6f2
+2026-03-05 16:07:55 [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-03-05 16:08:10 [INFO] com.fintech.Filter.GlobalExceptionFilter - REQUEST  | method=POST uri=/auth/login 
+2026-03-05 16:08:10 [WARN] com.fintech.Service.AuthService - Login failed. Email not found: baskarangm811202@gmail.com
+2026-03-05 16:08:10 [ERROR] com.fintech.Filter.GlobalExceptionFilter - RESPONSE | method=POST uri=/auth/login status=401 timeTaken=251ms error=Invalid credentials
+2026-03-05 16:08:38 [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-03-05 16:08:38 [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-03-05 16:26:11 [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-03-05 16:26:12 [INFO] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4e09c3b0
+2026-03-05 16:26:12 [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-03-05 16:26:48 [INFO] com.fintech.Filter.GlobalExceptionFilter - REQUEST  | method=POST uri=/auth/register 
+2026-03-05 16:26:48 [INFO] com.fintech.Dao.UserDao - User exists with email: baskarangm81102@gmail.com
+2026-03-05 16:26:48 [WARN] com.fintech.Service.AuthService - Email already registered with another user account for baskarangm81102@gmail.com
+2026-03-05 16:26:48 [ERROR] com.fintech.Service.AuthService - Connection error during registration. Email: baskarangm81102@gmail.com
+com.fintech.Exception.ConflictException: Email already exists
+	at com.fintech.Service.AuthService.register(AuthService.java:45)
+	at com.fintech.Controller.AuthController.handleRegister(AuthController.java:78)
+	at com.fintech.Controller.AuthController.doPost(AuthController.java:41)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:555)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:197)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:142)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:142)
+	at com.fintech.Filter.JwtAuthenticationFilter.doFilter(JwtAuthenticationFilter.java:21)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:142)
+	at com.fintech.Filter.GlobalExceptionFilter.doFilter(GlobalExceptionFilter.java:58)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:142)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:166)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:88)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:481)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:127)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:83)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:643)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:72)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:398)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:939)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1831)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:973)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:491)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2026-03-05 16:26:48 [ERROR] com.fintech.Filter.GlobalExceptionFilter - RESPONSE | method=POST uri=/auth/register status=500 timeTaken=192ms error=Database error
+2026-03-05 16:27:28 [INFO] com.fintech.Filter.GlobalExceptionFilter - REQUEST  | method=POST uri=/auth/register 
+2026-03-05 16:27:28 [INFO] com.fintech.Dao.UserDao - User exists with email: baskarangm811202@gmail.com
+2026-03-05 16:27:28 [ERROR] com.fintech.Service.AuthService - Registration failed. Email: baskarangm811202@gmail.com
+com.fintech.Exception.BadRequestException: User name must have at least 3 characters
+	at com.fintech.Util.UserAccountValidator.validate(UserAccountValidator.java:27)
+	at com.fintech.Service.AuthService.register(AuthService.java:56)
+	at com.fintech.Controller.AuthController.handleRegister(AuthController.java:78)
+	at com.fintech.Controller.AuthController.doPost(AuthController.java:41)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:555)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:197)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:142)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:142)
+	at com.fintech.Filter.JwtAuthenticationFilter.doFilter(JwtAuthenticationFilter.java:21)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:142)
+	at com.fintech.Filter.GlobalExceptionFilter.doFilter(GlobalExceptionFilter.java:58)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:142)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:166)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:88)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:481)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:127)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:83)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:643)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:72)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:398)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:939)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1831)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:973)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:491)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2026-03-05 16:27:28 [ERROR] com.fintech.Service.AuthService - Connection error during registration. Email: baskarangm811202@gmail.com
+com.fintech.Exception.InternalServerException: Database error
+	at com.fintech.Service.AuthService.register(AuthService.java:79)
+	at com.fintech.Controller.AuthController.handleRegister(AuthController.java:78)
+	at com.fintech.Controller.AuthController.doPost(AuthController.java:41)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:555)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:197)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:142)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:142)
+	at com.fintech.Filter.JwtAuthenticationFilter.doFilter(JwtAuthenticationFilter.java:21)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:142)
+	at com.fintech.Filter.GlobalExceptionFilter.doFilter(GlobalExceptionFilter.java:58)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:142)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:166)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:88)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:481)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:127)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:83)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:643)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:72)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:398)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:939)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1831)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:973)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:491)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2026-03-05 16:27:28 [ERROR] com.fintech.Filter.GlobalExceptionFilter - RESPONSE | method=POST uri=/auth/register status=500 timeTaken=288ms error=Database error
+2026-03-05 16:37:35 [INFO] com.fintech.Filter.GlobalExceptionFilter - REQUEST  | method=POST uri=/auth/register 
+2026-03-05 16:37:35 [INFO] com.fintech.Dao.UserDao - User exists with email: baskarangm811202@gmail.com
+2026-03-05 16:37:35 [ERROR] com.fintech.Service.AuthService - Registration failed. Email: baskarangm811202@gmail.com
+com.fintech.Exception.BadRequestException: User name must have at least 3 characters
+	at com.fintech.Util.UserAccountValidator.validate(UserAccountValidator.java:27)
+	at com.fintech.Service.AuthService.register(AuthService.java:56)
+	at com.fintech.Controller.AuthController.handleRegister(AuthController.java:78)
+	at com.fintech.Controller.AuthController.doPost(AuthController.java:41)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:555)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:197)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:142)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:142)
+	at com.fintech.Filter.JwtAuthenticationFilter.doFilter(JwtAuthenticationFilter.java:21)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:142)
+	at com.fintech.Filter.GlobalExceptionFilter.doFilter(GlobalExceptionFilter.java:58)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:142)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:166)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:88)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:481)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:127)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:83)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:643)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:72)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:398)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:939)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1831)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:973)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:491)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2026-03-05 16:37:35 [ERROR] com.fintech.Service.AuthService - Connection error during registration. Email: baskarangm811202@gmail.com
+com.fintech.Exception.InternalServerException: Database error
+	at com.fintech.Service.AuthService.register(AuthService.java:79)
+	at com.fintech.Controller.AuthController.handleRegister(AuthController.java:78)
+	at com.fintech.Controller.AuthController.doPost(AuthController.java:41)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:555)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:197)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:142)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:142)
+	at com.fintech.Filter.JwtAuthenticationFilter.doFilter(JwtAuthenticationFilter.java:21)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:142)
+	at com.fintech.Filter.GlobalExceptionFilter.doFilter(GlobalExceptionFilter.java:58)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:142)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:166)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:88)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:481)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:127)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:83)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:643)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:72)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:398)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:939)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1831)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:973)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:491)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2026-03-05 16:37:35 [ERROR] com.fintech.Filter.GlobalExceptionFilter - RESPONSE | method=POST uri=/auth/register status=500 timeTaken=393ms error=Database error
+2026-03-05 16:37:38 [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-03-05 16:37:38 [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-03-05 16:37:46 [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-03-05 16:37:47 [INFO] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@421c4c3e
+2026-03-05 16:37:47 [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-03-05 16:37:56 [INFO] com.fintech.Filter.GlobalExceptionFilter - REQUEST  | method=POST uri=/auth/register 
+2026-03-05 16:37:56 [INFO] com.fintech.Dao.UserDao - User exists with email: baskarangm811202@gmail.com exist:false
+2026-03-05 16:37:56 [ERROR] com.fintech.Service.AuthService - Registration failed. Email: baskarangm811202@gmail.com
+com.fintech.Exception.BadRequestException: User name must have at least 3 characters
+	at com.fintech.Util.UserAccountValidator.validate(UserAccountValidator.java:27)
+	at com.fintech.Service.AuthService.register(AuthService.java:56)
+	at com.fintech.Controller.AuthController.handleRegister(AuthController.java:78)
+	at com.fintech.Controller.AuthController.doPost(AuthController.java:41)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:555)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:197)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:142)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:142)
+	at com.fintech.Filter.JwtAuthenticationFilter.doFilter(JwtAuthenticationFilter.java:21)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:142)
+	at com.fintech.Filter.GlobalExceptionFilter.doFilter(GlobalExceptionFilter.java:58)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:142)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:166)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:88)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:481)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:127)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:83)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:643)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:72)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:398)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:939)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1831)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:973)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:491)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2026-03-05 16:37:56 [ERROR] com.fintech.Service.AuthService - Connection error during registration. Email: baskarangm811202@gmail.com
+com.fintech.Exception.InternalServerException: Database error
+	at com.fintech.Service.AuthService.register(AuthService.java:79)
+	at com.fintech.Controller.AuthController.handleRegister(AuthController.java:78)
+	at com.fintech.Controller.AuthController.doPost(AuthController.java:41)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:555)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:197)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:142)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:142)
+	at com.fintech.Filter.JwtAuthenticationFilter.doFilter(JwtAuthenticationFilter.java:21)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:142)
+	at com.fintech.Filter.GlobalExceptionFilter.doFilter(GlobalExceptionFilter.java:58)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:142)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:166)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:88)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:481)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:127)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:83)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:643)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:72)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:398)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:939)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1831)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:973)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:491)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2026-03-05 16:37:56 [ERROR] com.fintech.Filter.GlobalExceptionFilter - RESPONSE | method=POST uri=/auth/register status=500 timeTaken=481ms error=Database error
+2026-03-05 16:42:53 [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-03-05 16:42:53 [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-03-05 16:43:01 [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-03-05 16:43:02 [INFO] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@302692b1
+2026-03-05 16:43:02 [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-03-05 16:43:12 [INFO] com.fintech.Filter.GlobalExceptionFilter - REQUEST  | method=POST uri=/auth/register 
+2026-03-05 16:43:12 [INFO] com.fintech.Dao.UserDao - User exists with email: baskarangm811202@gmail.com exist:false
+2026-03-05 16:43:12 [ERROR] com.fintech.Service.AuthService - Registration failed. Email: baskarangm811202@gmail.com
+2026-03-05 16:43:12 [ERROR] com.fintech.Service.AuthService - Connection error during registration. Email: baskarangm811202@gmail.com
+com.fintech.Exception.InternalServerException: Database error
+	at com.fintech.Service.AuthService.register(AuthService.java:79)
+	at com.fintech.Controller.AuthController.handleRegister(AuthController.java:78)
+	at com.fintech.Controller.AuthController.doPost(AuthController.java:41)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:555)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:197)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:142)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:142)
+	at com.fintech.Filter.JwtAuthenticationFilter.doFilter(JwtAuthenticationFilter.java:21)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:142)
+	at com.fintech.Filter.GlobalExceptionFilter.doFilter(GlobalExceptionFilter.java:58)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:142)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:166)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:88)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:481)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:127)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:83)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:643)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:72)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:398)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:939)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1831)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:973)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:491)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2026-03-05 16:43:12 [ERROR] com.fintech.Filter.GlobalExceptionFilter - RESPONSE | method=POST uri=/auth/register status=500 timeTaken=533ms error=Database error
+2026-03-05 16:47:02 [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-03-05 16:47:02 [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-03-05 16:47:09 [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-03-05 16:47:10 [INFO] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@7789719e
+2026-03-05 16:47:10 [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-03-05 16:47:18 [INFO] com.fintech.Filter.GlobalExceptionFilter - REQUEST  | method=POST uri=/auth/register 
+2026-03-05 16:47:18 [INFO] com.fintech.Dao.UserDao - User exists with email: baskarangm811202@gmail.com exist:false
+2026-03-05 16:47:18 [ERROR] com.fintech.Service.AuthService - Registration failed. Email: baskarangm811202@gmail.com
+2026-03-05 16:47:18 [ERROR] com.fintech.Service.AuthService - Connection error during registration. Email: baskarangm811202@gmail.com
+com.fintech.Exception.InternalServerException: User name must have at least 3 characters
+	at com.fintech.Service.AuthService.register(AuthService.java:79)
+	at com.fintech.Controller.AuthController.handleRegister(AuthController.java:78)
+	at com.fintech.Controller.AuthController.doPost(AuthController.java:41)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:555)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:197)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:142)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:142)
+	at com.fintech.Filter.JwtAuthenticationFilter.doFilter(JwtAuthenticationFilter.java:21)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:142)
+	at com.fintech.Filter.GlobalExceptionFilter.doFilter(GlobalExceptionFilter.java:58)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:142)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:166)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:88)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:481)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:127)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:83)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:643)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:72)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:398)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:939)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1831)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:973)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:491)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2026-03-05 16:47:18 [ERROR] com.fintech.Filter.GlobalExceptionFilter - RESPONSE | method=POST uri=/auth/register status=500 timeTaken=517ms error=Database error
+2026-03-05 17:21:31 [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-03-05 17:21:31 [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-03-05 17:21:40 [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-03-05 17:21:40 [INFO] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@421c4c3e
+2026-03-05 17:21:40 [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-03-05 17:23:54 [INFO] com.fintech.Filter.GlobalExceptionFilter - REQUEST  | method=POST uri=/auth/register 
+2026-03-05 17:23:54 [INFO] com.fintech.Dao.UserDao - User exists with email: baskarangm811202@gmail.com exist:false
+2026-03-05 17:23:55 [ERROR] com.fintech.Service.AuthService - Registration failed. Email: baskarangm811202@gmail.com
+com.fintech.Exception.BadRequestException: User name must have at least 3 characters
+	at com.fintech.Util.UserAccountValidator.validate(UserAccountValidator.java:27)
+	at com.fintech.Service.AuthService.register(AuthService.java:57)
+	at com.fintech.Controller.AuthController.handleRegister(AuthController.java:78)
+	at com.fintech.Controller.AuthController.doPost(AuthController.java:41)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:555)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:197)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:142)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:142)
+	at com.fintech.Filter.JwtAuthenticationFilter.doFilter(JwtAuthenticationFilter.java:21)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:142)
+	at com.fintech.Filter.GlobalExceptionFilter.doFilter(GlobalExceptionFilter.java:58)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:142)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:166)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:88)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:481)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:127)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:83)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:643)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:72)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:398)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:939)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1831)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:973)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:491)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2026-03-05 17:23:55 [ERROR] com.fintech.Filter.GlobalExceptionFilter - RESPONSE | method=POST uri=/auth/register status=400 timeTaken=591ms error=User name must have at least 3 characters
+2026-03-05 17:56:51 [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-03-05 17:56:51 [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-03-05 17:57:38 [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-03-05 17:57:38 [INFO] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@57f31caf
+2026-03-05 17:57:38 [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-03-05 17:57:55 [INFO] com.fintech.Filter.GlobalExceptionFilter - REQUEST  | method=POST uri=/auth/register 
+2026-03-05 17:57:55 [INFO] com.fintech.Dao.UserDao - User exists with email: baskarangm811202@gmail.com exist:false
+2026-03-05 17:57:55 [ERROR] com.fintech.Service.AuthService - Registration failed. Email: baskarangm811202@gmail.com
+com.fintech.Exception.BadRequestException: User name must have at least 3 characters
+	at com.fintech.Util.UserAccountValidator.validate(UserAccountValidator.java:27)
+	at com.fintech.Service.AuthService.register(AuthService.java:57)
+	at com.fintech.Controller.AuthController.handleRegister(AuthController.java:78)
+	at com.fintech.Controller.AuthController.doPost(AuthController.java:41)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:555)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:197)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:142)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:142)
+	at com.fintech.Filter.JwtAuthenticationFilter.doFilter(JwtAuthenticationFilter.java:21)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:142)
+	at com.fintech.Filter.GlobalExceptionFilter.doFilter(GlobalExceptionFilter.java:58)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:142)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:166)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:88)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:481)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:127)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:83)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:643)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:72)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:398)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:939)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1831)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:973)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:491)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2026-03-05 17:57:55 [ERROR] com.fintech.Filter.GlobalExceptionFilter - RESPONSE | method=POST uri=/auth/register status=400 timeTaken=489ms error=User name must have at least 3 characters
+2026-03-05 17:58:11 [INFO] com.fintech.Filter.GlobalExceptionFilter - REQUEST  | method=POST uri=/auth/register 
+2026-03-05 17:58:11 [INFO] com.fintech.Dao.UserDao - User exists with email: baskarangm81102@gmail.com exist:true
+2026-03-05 17:58:11 [WARN] com.fintech.Service.AuthService - Email already registered with another user account for baskarangm81102@gmail.com
+2026-03-05 17:58:11 [ERROR] com.fintech.Filter.GlobalExceptionFilter - RESPONSE | method=POST uri=/auth/register status=409 timeTaken=4ms error=Email already exists
+2026-03-05 17:58:41 [INFO] com.fintech.Filter.GlobalExceptionFilter - REQUEST  | method=POST uri=/auth/register 
+2026-03-05 17:58:41 [INFO] com.fintech.Dao.UserDao - User exists with email: baskarangm811202@gmail.com exist:false
+2026-03-05 17:58:41 [ERROR] com.fintech.Service.AuthService - Registration failed. Email: baskarangm811202@gmail.com
+com.fintech.Exception.BadRequestException: Invalid password format
+	at com.fintech.Util.UserAccountValidator.validate(UserAccountValidator.java:49)
+	at com.fintech.Service.AuthService.register(AuthService.java:57)
+	at com.fintech.Controller.AuthController.handleRegister(AuthController.java:78)
+	at com.fintech.Controller.AuthController.doPost(AuthController.java:41)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:555)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:197)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:142)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:142)
+	at com.fintech.Filter.JwtAuthenticationFilter.doFilter(JwtAuthenticationFilter.java:21)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:142)
+	at com.fintech.Filter.GlobalExceptionFilter.doFilter(GlobalExceptionFilter.java:58)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:142)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:166)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:88)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:481)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:127)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:83)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:643)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:72)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:398)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:939)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1831)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:973)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:491)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2026-03-05 17:58:41 [ERROR] com.fintech.Filter.GlobalExceptionFilter - RESPONSE | method=POST uri=/auth/register status=400 timeTaken=241ms error=Invalid password format
+2026-03-05 17:58:54 [INFO] com.fintech.Filter.GlobalExceptionFilter - REQUEST  | method=POST uri=/auth/register 
+2026-03-05 17:58:54 [INFO] com.fintech.Dao.UserDao - User exists with email: baskarangm811202@gmail.com exist:false
+2026-03-05 17:58:55 [ERROR] com.fintech.Service.AuthService - Registration failed. Email: baskarangm811202@gmail.com
+com.fintech.Exception.BadRequestException: Invalid password format
+	at com.fintech.Util.UserAccountValidator.validate(UserAccountValidator.java:49)
+	at com.fintech.Service.AuthService.register(AuthService.java:57)
+	at com.fintech.Controller.AuthController.handleRegister(AuthController.java:78)
+	at com.fintech.Controller.AuthController.doPost(AuthController.java:41)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:555)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:197)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:142)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:142)
+	at com.fintech.Filter.JwtAuthenticationFilter.doFilter(JwtAuthenticationFilter.java:21)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:142)
+	at com.fintech.Filter.GlobalExceptionFilter.doFilter(GlobalExceptionFilter.java:58)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:142)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:166)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:88)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:481)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:127)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:83)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:643)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:72)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:398)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:939)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1831)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:973)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:491)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2026-03-05 17:58:55 [ERROR] com.fintech.Filter.GlobalExceptionFilter - RESPONSE | method=POST uri=/auth/register status=400 timeTaken=458ms error=Invalid password format
+2026-03-05 17:59:31 [INFO] com.fintech.Filter.GlobalExceptionFilter - REQUEST  | method=POST uri=/auth/register 
+2026-03-05 17:59:31 [INFO] com.fintech.Dao.UserDao - User exists with email: baskarangm811202@gmail.com exist:false
+2026-03-05 17:59:32 [ERROR] com.fintech.Service.AuthService - Registration failed. Email: baskarangm811202@gmail.com
+com.fintech.Exception.BadRequestException: Invalid password format
+	at com.fintech.Util.UserAccountValidator.validate(UserAccountValidator.java:49)
+	at com.fintech.Service.AuthService.register(AuthService.java:57)
+	at com.fintech.Controller.AuthController.handleRegister(AuthController.java:78)
+	at com.fintech.Controller.AuthController.doPost(AuthController.java:41)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:555)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:197)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:142)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:142)
+	at com.fintech.Filter.JwtAuthenticationFilter.doFilter(JwtAuthenticationFilter.java:21)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:142)
+	at com.fintech.Filter.GlobalExceptionFilter.doFilter(GlobalExceptionFilter.java:58)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:142)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:166)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:88)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:481)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:127)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:83)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:643)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:72)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:398)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:939)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1831)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:973)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:491)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2026-03-05 17:59:32 [ERROR] com.fintech.Filter.GlobalExceptionFilter - RESPONSE | method=POST uri=/auth/register status=400 timeTaken=305ms error=Invalid password format
+2026-03-05 17:59:58 [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-03-05 17:59:58 [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-03-05 18:00:05 [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-03-05 18:00:06 [INFO] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@421c4c3e
+2026-03-05 18:00:06 [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-03-05 18:00:18 [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-03-05 18:00:18 [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-03-05 18:00:25 [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-03-05 18:00:25 [INFO] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@7da70124
+2026-03-05 18:00:25 [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-03-05 18:00:39 [INFO] com.fintech.Filter.GlobalExceptionFilter - REQUEST  | method=POST uri=/auth/register 
+2026-03-05 18:00:39 [INFO] com.fintech.Dao.UserDao - User exists with email: baskarangm811202@gmail.com exist:false
+2026-03-05 18:01:24 [WARN] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=58s208ms822µs200ns).
+2026-03-05 18:01:24 [ERROR] com.fintech.Service.AuthService - Registration failed. Email: baskarangm811202@gmail.com
+com.fintech.Exception.BadRequestException: Invalid password format
+	at com.fintech.Util.UserAccountValidator.validate(UserAccountValidator.java:49)
+	at com.fintech.Service.AuthService.register(AuthService.java:57)
+	at com.fintech.Controller.AuthController.handleRegister(AuthController.java:78)
+	at com.fintech.Controller.AuthController.doPost(AuthController.java:41)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:555)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:197)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:142)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:142)
+	at com.fintech.Filter.JwtAuthenticationFilter.doFilter(JwtAuthenticationFilter.java:21)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:142)
+	at com.fintech.Filter.GlobalExceptionFilter.doFilter(GlobalExceptionFilter.java:58)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:142)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:166)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:88)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:481)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:127)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:83)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:643)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:72)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:398)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:939)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1831)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:973)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:491)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2026-03-05 18:01:24 [ERROR] com.fintech.Filter.GlobalExceptionFilter - RESPONSE | method=POST uri=/auth/register status=400 timeTaken=45244ms error=Invalid password format
+2026-03-05 18:01:24 [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-03-05 18:01:24 [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-03-05 18:09:12 [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-03-05 18:09:13 [INFO] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4e09c3b0
+2026-03-05 18:09:13 [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-03-05 18:10:18 [INFO] com.fintech.Filter.GlobalExceptionFilter - REQUEST  | method=POST uri=/auth/register 
+2026-03-05 18:10:18 [INFO] com.fintech.Dao.UserDao - User exists with email: baskarangm811202@gmail.com exist:false
+2026-03-05 18:10:18 [ERROR] com.fintech.Service.AuthService - Registration failed. Email: baskarangm811202@gmail.com
+com.fintech.Exception.BadRequestException: Password must have at least 8 characters
+	at com.fintech.Util.UserAccountValidator.validatePassword(UserAccountValidator.java:80)
+	at com.fintech.Service.AuthService.register(AuthService.java:57)
+	at com.fintech.Controller.AuthController.handleRegister(AuthController.java:78)
+	at com.fintech.Controller.AuthController.doPost(AuthController.java:41)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:555)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:197)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:142)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:142)
+	at com.fintech.Filter.JwtAuthenticationFilter.doFilter(JwtAuthenticationFilter.java:21)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:142)
+	at com.fintech.Filter.GlobalExceptionFilter.doFilter(GlobalExceptionFilter.java:58)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:142)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:166)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:88)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:481)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:127)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:83)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:643)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:72)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:398)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:939)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1831)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:973)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:491)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2026-03-05 18:10:18 [ERROR] com.fintech.Filter.GlobalExceptionFilter - RESPONSE | method=POST uri=/auth/register status=400 timeTaken=297ms error=Password must have at least 8 characters
+2026-03-05 18:10:34 [INFO] com.fintech.Filter.GlobalExceptionFilter - REQUEST  | method=POST uri=/auth/register 
+2026-03-05 18:10:34 [INFO] com.fintech.Dao.UserDao - User exists with email: baskarangm811202@gmail.com exist:false
+2026-03-05 18:10:34 [ERROR] com.fintech.Service.AuthService - Registration failed. Email: baskarangm811202@gmail.com
+com.fintech.Exception.BadRequestException: Invalid password format
+	at com.fintech.Util.UserAccountValidator.validatePassword(UserAccountValidator.java:84)
+	at com.fintech.Service.AuthService.register(AuthService.java:57)
+	at com.fintech.Controller.AuthController.handleRegister(AuthController.java:78)
+	at com.fintech.Controller.AuthController.doPost(AuthController.java:41)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:555)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:197)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:142)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:142)
+	at com.fintech.Filter.JwtAuthenticationFilter.doFilter(JwtAuthenticationFilter.java:21)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:142)
+	at com.fintech.Filter.GlobalExceptionFilter.doFilter(GlobalExceptionFilter.java:58)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:142)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:166)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:88)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:481)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:127)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:83)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:643)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:72)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:398)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:939)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1831)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:973)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:491)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2026-03-05 18:10:34 [ERROR] com.fintech.Filter.GlobalExceptionFilter - RESPONSE | method=POST uri=/auth/register status=400 timeTaken=5ms error=Invalid password format
+2026-03-05 18:10:39 [INFO] com.fintech.Filter.GlobalExceptionFilter - REQUEST  | method=POST uri=/auth/register 
+2026-03-05 18:10:39 [INFO] com.fintech.Dao.UserDao - User exists with email: baskarangm811202@gmail.com exist:false
+2026-03-05 18:10:39 [ERROR] com.fintech.Service.AuthService - Registration failed. Email: baskarangm811202@gmail.com
+com.fintech.Exception.BadRequestException: Invalid password format
+	at com.fintech.Util.UserAccountValidator.validatePassword(UserAccountValidator.java:84)
+	at com.fintech.Service.AuthService.register(AuthService.java:57)
+	at com.fintech.Controller.AuthController.handleRegister(AuthController.java:78)
+	at com.fintech.Controller.AuthController.doPost(AuthController.java:41)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:555)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:197)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:142)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:142)
+	at com.fintech.Filter.JwtAuthenticationFilter.doFilter(JwtAuthenticationFilter.java:21)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:142)
+	at com.fintech.Filter.GlobalExceptionFilter.doFilter(GlobalExceptionFilter.java:58)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:142)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:166)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:88)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:481)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:127)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:83)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:643)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:72)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:398)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:939)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1831)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:973)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:491)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2026-03-05 18:10:39 [ERROR] com.fintech.Filter.GlobalExceptionFilter - RESPONSE | method=POST uri=/auth/register status=400 timeTaken=4ms error=Invalid password format
+2026-03-05 18:10:43 [INFO] com.fintech.Filter.GlobalExceptionFilter - REQUEST  | method=POST uri=/auth/register 
+2026-03-05 18:10:43 [INFO] com.fintech.Dao.UserDao - User exists with email: baskarangm811202@gmail.com exist:false
+2026-03-05 18:10:43 [INFO] com.fintech.Dao.UserDao - User created with ID: 4
+2026-03-05 18:10:43 [INFO] com.fintech.Dao.WalletDao - Wallet created for user ID: 4
+2026-03-05 18:10:43 [INFO] com.fintech.Service.AuthService - User registration successful for email: baskarangm811202@gmail.com
+2026-03-05 18:10:43 [INFO] com.fintech.Filter.GlobalExceptionFilter - RESPONSE | method=POST uri=/auth/register status=201 timeTaken=335ms
+2026-03-05 18:10:55 [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-03-05 18:10:55 [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.

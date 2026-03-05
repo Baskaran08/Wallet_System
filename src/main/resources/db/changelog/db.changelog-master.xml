@@ -1,0 +1,153 @@
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="
+        http://www.liquibase.org/xml/ns/dbchangelog
+        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.3.xsd">
+
+
+    <changeSet id="1" author="Baskaran">
+        <createTable tableName="users">
+            <column name="id" type="BIGINT" autoIncrement="true">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="full_name" type="VARCHAR(150)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="email" type="VARCHAR(150)">
+                <constraints nullable="false" unique="true"/>
+            </column>
+            <column name="password_hash" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="role" type="VARCHAR(20)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="created_at" type="DATETIME" defaultValueComputed="CURRENT_TIMESTAMP"/>
+            <column name="updated_at" type="DATETIME" defaultValueComputed="CURRENT_TIMESTAMP"/>
+        </createTable>
+
+        <rollback>
+            <dropTable tableName="users"/>
+        </rollback>
+    </changeSet>
+
+    <changeSet id="2" author="Baskaran">
+        <createTable tableName="wallets">
+            <column name="id" type="BIGINT" autoIncrement="true">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="user_id" type="BIGINT">
+                <constraints nullable="false" unique="true"/>
+            </column>
+            <column name="balance" type="DECIMAL(15,2)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="status" type="VARCHAR(20)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="created_at" type="DATETIME" defaultValueComputed="CURRENT_TIMESTAMP"/>
+            <column name="updated_at" type="DATETIME" defaultValueComputed="CURRENT_TIMESTAMP"/>
+        </createTable>
+
+        <addForeignKeyConstraint
+                baseTableName="wallets"
+                baseColumnNames="user_id"
+                referencedTableName="users"
+                referencedColumnNames="id"
+                constraintName="fk_wallet_user"/>
+
+        <rollback>
+            <dropTable tableName="wallets"/>
+        </rollback>
+
+    </changeSet>
+
+    <changeSet id="3" author="Baskaran">
+        <createTable tableName="invoices">
+            <column name="id" type="BIGINT" autoIncrement="true">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="user_id" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="amount" type="DECIMAL(15,2)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="description" type="VARCHAR(255)"/>
+            <column name="payment_token" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="qr_code_path" type="VARCHAR(255)"/>
+            <column name="status" type="VARCHAR(20)">
+                <constraints nullable="false"/>
+            </column>
+
+            <column name="expiry_time" type="DATETIME"/>
+            <column name="created_at" type="DATETIME" defaultValueComputed="CURRENT_TIMESTAMP"/>
+            <column name="updated_at" type="DATETIME" defaultValueComputed="CURRENT_TIMESTAMP"/>
+        </createTable>
+
+        <addForeignKeyConstraint
+                baseTableName="invoices"
+                baseColumnNames="user_id"
+                referencedTableName="users"
+                referencedColumnNames="id"
+                constraintName="fk_invoice_user"/>
+
+        <rollback>
+            <dropTable tableName="invoices"/>
+        </rollback>
+    </changeSet>
+
+    <changeSet id="4" author="Baskaran">
+        <createTable tableName="transactions">
+            <column name="id" type="BIGINT" autoIncrement="true">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="sender_wallet_id" type="BIGINT"/>
+            <column name="receiver_wallet_id" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="amount" type="DECIMAL(15,2)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="type" type="VARCHAR(30)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="status" type="VARCHAR(30)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="invoice_id" type="BIGINT"/>
+            <column name="created_at" type="DATETIME" defaultValueComputed="CURRENT_TIMESTAMP"/>
+            <column name="updated_at" type="DATETIME" defaultValueComputed="CURRENT_TIMESTAMP"/>
+        </createTable>
+
+        <addForeignKeyConstraint
+                baseTableName="transactions"
+                baseColumnNames="sender_wallet_id"
+                referencedTableName="wallets"
+                referencedColumnNames="id"
+                constraintName="fk_tx_sender_wallet"/>
+
+        <addForeignKeyConstraint
+                baseTableName="transactions"
+                baseColumnNames="receiver_wallet_id"
+                referencedTableName="wallets"
+                referencedColumnNames="id"
+                constraintName="fk_tx_receiver_wallet"/>
+
+        <addForeignKeyConstraint
+                baseTableName="transactions"
+                baseColumnNames="invoice_id"
+                referencedTableName="invoices"
+                referencedColumnNames="id"
+                constraintName="fk_tx_invoice"/>
+
+        <rollback>
+            <dropTable tableName="transactions"/>
+        </rollback>
+    </changeSet>
+
+
+</databaseChangeLog>

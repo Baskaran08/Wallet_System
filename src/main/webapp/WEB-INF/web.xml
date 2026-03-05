@@ -1,0 +1,86 @@
+<!DOCTYPE web-app PUBLIC
+ "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+ "http://java.sun.com/dtd/web-app_2_3.dtd" >
+
+<web-app>
+  <display-name>Archetype Created Web Application</display-name>
+    <!--Servlets-->
+    <servlet>
+        <servlet-name>AuthController</servlet-name>
+        <servlet-class>com.fintech.Controller.AuthController</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AuthController</servlet-name>
+        <url-pattern>/auth/*</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>WalletController</servlet-name>
+        <servlet-class>com.fintech.Controller.WalletController</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>WalletController</servlet-name>
+        <url-pattern>/wallet/*</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>InvoiceController</servlet-name>
+        <servlet-class>com.fintech.Controller.InvoiceController</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>InvoiceController</servlet-name>
+        <url-pattern>/invoice/*</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>TransactionController</servlet-name>
+        <servlet-class>com.fintech.Controller.TransactionController</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>TransactionController</servlet-name>
+        <url-pattern>/transaction/*</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>AdminController</servlet-name>
+        <servlet-class>com.fintech.Controller.AdminController</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AdminController</servlet-name>
+        <url-pattern>/admin/*</url-pattern>
+    </servlet-mapping>
+    <!--Filters-->
+    <filter>
+        <filter-name>GlobalExceptionFilter</filter-name>
+        <filter-class>com.fintech.Filter.GlobalExceptionFilter</filter-class>
+    </filter>
+
+    <filter-mapping>
+        <filter-name>GlobalExceptionFilter</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+
+    <filter>
+        <filter-name>JwtAuthenticationFilter</filter-name>
+        <filter-class>com.fintech.Filter.JwtAuthenticationFilter</filter-class>
+    </filter>
+
+    <filter-mapping>
+        <filter-name>JwtAuthenticationFilter</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+    <filter>
+        <filter-name>AdminAuthorizationFilter</filter-name>
+        <filter-class>com.fintech.Filter.AdminAuthorizationFilter</filter-class>
+    </filter>
+
+    <filter-mapping>
+        <filter-name>AdminAuthorizationFilter</filter-name>
+        <url-pattern>/admin/*</url-pattern>
+    </filter-mapping>
+
+    <!--Listeners-->
+    <listener>
+        <listener-class>com.fintech.Config.AppContextListener</listener-class>
+    </listener>
+</web-app>

@@ -1,0 +1,16 @@
+package com.fintech.Util;
+
+import org.mindrot.jbcrypt.BCrypt;
+
+public class PasswordUtil {
+
+    private PasswordUtil() {}
+
+    public static String hash(String rawPassword) {
+        return BCrypt.hashpw(rawPassword, BCrypt.gensalt(12));
+    }
+
+    public static boolean verify(String rawPassword, String hashedPassword) {
+        return BCrypt.checkpw(rawPassword, hashedPassword);
+    }
+}
