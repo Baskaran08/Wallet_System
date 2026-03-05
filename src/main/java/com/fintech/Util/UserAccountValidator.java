@@ -11,46 +11,6 @@ public class UserAccountValidator {
     private static final Pattern PASSWORD_PATTERN = Pattern.compile("^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)(?=.*[@$!%*?&])[A-Za-z\\d@$!%*?&]{8,}$");
 
 
-
-    public static void validate(User user) {
-
-        if (user == null) {
-            throw new BadRequestException("User details cannot be null");
-        }
-
-        // user name validation
-        if (isBlank(user.getFullName())) {
-            throw new BadRequestException("User name is required");
-        }
-
-        if (user.getFullName().length() < 3) {
-            throw new BadRequestException("User name must have at least 3 characters");
-        }
-
-        //  Email validation
-        if (isBlank(user.getEmail())) {
-            throw new BadRequestException("Email is required");
-        }
-
-        if (!EMAIL_PATTERN.matcher(user.getEmail()).matches()) {
-            throw new BadRequestException("Invalid email format");
-        }
-
-        // password validation
-        if (isBlank(user.getPasswordHash())) {
-            throw new BadRequestException("Password is required");
-        }
-
-        if (user.getPasswordHash().length() < 8) {
-            throw new BadRequestException("Password must have at least 8 characters");
-        }
-
-        if (!PASSWORD_PATTERN.matcher(user.getPasswordHash()).matches()) {
-            throw new BadRequestException("Invalid password format");
-        }
-
-    }
-
     public static void validateName(String name){
         if (isBlank(name)) {
             throw new BadRequestException("User name is required");
