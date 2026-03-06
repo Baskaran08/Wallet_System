@@ -32,7 +32,7 @@ public class InvoiceEmailConsumer  {
             Connection connection = factory.createConnection();
             connection.start();
 
-            Session session = connection.createSession(false, Session.AUTO_ACKNOWLEDGE);
+            Session session = connection.createSession(false, Session.CLIENT_ACKNOWLEDGE);
 
             Destination destination = session.createQueue(queue);
 
@@ -41,6 +41,12 @@ public class InvoiceEmailConsumer  {
             consumer.setMessageListener(message ->{
                 try {
                     if (message instanceof TextMessage) {
+
+                        boolean redelivered= message.getJMSRedelivered();
+
+                        if(redelivered){
+                            logger.warn("Retrying failed message");
+                        }
 
                         String json = ((TextMessage)message).getText();
 
@@ -54,6 +60,7 @@ public class InvoiceEmailConsumer  {
                                 event.getPaymentLink(),
                                 event.getQrPath()
                         );
+                        message.acknowledge();
                     }
 
                 } catch (Exception e) {

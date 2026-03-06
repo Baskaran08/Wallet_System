@@ -27,9 +27,12 @@ public class InvoiceEmailProducer {
 
             Session session = connection.createSession(false, Session.AUTO_ACKNOWLEDGE);
 
+
             Destination destination = session.createQueue(queue);
 
+
             MessageProducer producer = session.createProducer(destination);
+            producer.setDeliveryMode(DeliveryMode.PERSISTENT);
 
             String json = objectMapper.writeValueAsString(event);
 

@@ -27,7 +27,6 @@ public class AuthService {
     private final DataSource dataSource;
     private final UserDao userDao;
     private final WalletDao walletDao;
-
     public AuthService(DataSource dataSource) {
         this.dataSource = dataSource;
         this.userDao = new UserDao(dataSource);
@@ -43,6 +42,7 @@ public class AuthService {
 
                 if (userDao.existsByEmail(connection, email)) {
                     logger.warn("Email already registered with another user account for {}",email);
+
                     throw new ConflictException("Email already exists");
                 }
 
